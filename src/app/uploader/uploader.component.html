@@ -1,0 +1,30 @@
+<div>
+  <div class="row">
+      <div class="col-md-2">
+        <label class="btn btn-success btn-file" [ngClass]="{'disabled': uploader.isUploading}">
+          <span class="glyphicon glyphicon-upload"></span>
+          Upload <input accept="video/*" type="file" style="display:none" [disabled]="uploader.isUploading" ng2FileSelect [uploader]="uploader"/>
+        </label>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4" *ngIf="uploader.isUploading">
+      <div class="progress" style="">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="showAlert">
+    <div class="col-md-4 alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" (click)="showAlert = false" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Error!</strong> {{error}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" *ngIf="videoUrl">
+      <iframe allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" width="512" height="288" allowfullscreen mozallowfullscreen webkitallowfullscreen
+              oallowfullscreen msallowfullscreen  [src]="videoUrl"></iframe>
+    </div>
+  </div>
+</div>
