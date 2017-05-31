@@ -1,0 +1,20 @@
+{
+  "name": "wistia-uploader",
+  "version": "0.0.1",
+  "description": "Wistia Uploader\r =====================",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexN93/wistia-uploader.git"
+  },
+  "author": "Aleksandar Nikolov",
+  "homepage": "https://github.com/AlexN93/wistia-uploader",
+  "dependencies": {
+    "express": "^4.12.3",
+    "bower": "1.4.1"
+  }
+}

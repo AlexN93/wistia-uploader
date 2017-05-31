@@ -1,0 +1,35 @@
+<form name="wistiaUploaderForm" file-upload="options" enctype="multipart/form-data" novalidate="">
+    <div class="row">
+        <div class="col-md-2">
+                <span class="btn btn-success fileinput-button" ng-disabled="{{model.isUploading}}">
+                    <i class="glyphicon glyphicon-upload"></i>
+                    <span>Upload</span>
+                    <input type="file" name="file" accept="video/*" ng-disabled="{{model.isUploading}}">
+                </span>
+        </div>
+    </div>
+    <br>
+    <div class="row" ng-if="model.isUploading">
+        <div class="col-md-4">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                     ng-style="{ 'width' : model.uploadProgress  + '%'}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-if="model.showAlert">
+        <div class="col-md-4 alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" ng-click="model.showAlert = false"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Error!</strong> {{model.error}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" ng-if="model.videoUrl">
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" width="512"
+                    height="288" allowfullscreen mozallowfullscreen webkitallowfullscreen
+                    oallowfullscreen msallowfullscreen ng-src="{{model.videoUrl}}"></iframe>
+        </div>
+    </div>
+</form>
+

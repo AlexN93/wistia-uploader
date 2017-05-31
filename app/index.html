@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!--Styles for File Uploader Plugin -->
+    <link rel="stylesheet" href="../bower_components/blueimp-file-upload/css/jquery.fileupload.css" />
+    <link rel="stylesheet" href="../bower_components/blueimp-file-upload/css/jquery.fileupload-ui.css" />
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+
+    <!-- The basic File Upload plugin -->
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload-process.js"></script>
+    <!-- The File Upload Angular JS module -->
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload-angular.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers/home.js"></script>
+    <script src="components/uploader/uploader.js"></script>
+</head>
+
+<body ng-app="wistiaUploaderApp">
+    <div ng-view></div>
+</body>
+</html>

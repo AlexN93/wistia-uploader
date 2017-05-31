@@ -1,0 +1,29 @@
+{
+  "name": "wistia-uploader",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AlexN93/wistia-uploader",
+  "authors": [
+    "Aleksandar Nikolov <aleksandar.m.nikolov@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "bootstrap": "3.3.4",
+    "angular": "1.5.0",
+    "angular-route": "1.5.0"
+  },
+  "resolutions": {
+    "angular": "1.5.0",
+    "bootstrap": "^3.3.7"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "blueimp-file-upload": "^9.18.0",
+    "bootstrap": "^3.3.7"
+  }
+}
