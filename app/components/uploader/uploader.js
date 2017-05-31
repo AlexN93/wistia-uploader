@@ -27,7 +27,7 @@ wistiaUploaderApp.component('uploader', {
     $scope.$on('fileuploaddone', function (e, data) {
       $scope.model.isUploading = false;
       $scope.model.uploadProgress = 0;
-      $scope.model.videoUrl = $sce.trustAsResourceUrl('http://fast.wistia.com/embed/iframe/' + data.result.hashed_id + '/?videoFoam=true');
+      $scope.model.videoUrl = $sce.trustAsResourceUrl('https://fast.wistia.com/embed/iframe/' + data.result.hashed_id + '/?videoFoam=true');
     });
 
     $scope.$on('fileuploadfail', function (e, data) {
